@@ -137,6 +137,7 @@ class RecipeCard extends HTMLElement {
         "ingredients": "string"
 
      */
+    console.log('from data');
     let imgSrc = data['imgSrc'];
     let imgAlt = data['imgAlt'];
     let titleLnk = data['titleLnk'];
@@ -146,7 +147,8 @@ class RecipeCard extends HTMLElement {
     let numRatings = data['numRatings'];
     let lengthTime = data['lengthTime'];
     let ingredients = data['ingredients'];
-    innerArt.innnerHTML = `<img src= ${imgSrc}
+    console.log(imgAlt);
+    innerArt.innerHTML = `<img src= ${imgSrc}
                             alt=${imgAlt}>
                           <p class="title">
                             <a href=${titleLnk}>${titleTxt}</a>
@@ -161,7 +163,11 @@ class RecipeCard extends HTMLElement {
                           <p class="ingredients">
                             ${ingredients}
                           </p>`;
+
+
   }
+
+
 }
 
 // A8. TODO - Define the Class as a customElement so that you can create
